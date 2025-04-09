@@ -7,7 +7,10 @@ export default defineConfig({
   server: {
     port: 3001
   },
-  plugins: [pluginReact(), ZephyrRsbuildPlugin()],
+  plugins: [
+    pluginReact({ splitChunks: { react: false, router: false } }),
+    ZephyrRsbuildPlugin()
+  ],
   moduleFederation: {
     options: mfConfig
   }

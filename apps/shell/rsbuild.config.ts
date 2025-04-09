@@ -11,7 +11,7 @@ export default defineConfig({
     pluginReact({
       splitChunks: {
         react: false,
-        router: false
+        router: false,
       }
     }),
     ZephyrRsbuildPlugin()
